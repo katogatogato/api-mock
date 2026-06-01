@@ -1,0 +1,46 @@
+{
+  "name": "api-mock",
+  "version": "1.0.0",
+  "description": "Spin up a local mock server from an OpenAPI spec with realistic fake data",
+  "author": "katogatogato",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katogatogato/api-mock"
+  },
+  "keywords": [
+    "mock",
+    "openapi",
+    "api",
+    "testing",
+    "fake-data",
+    "server"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "api-mock": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
